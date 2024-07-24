@@ -5,11 +5,11 @@ provider "aws" {
 
 module "network" {
   source     = "./modules/network"
-  pub_sub = ["public_1" , "public_2" ]
-  pub_cidr = ["10.0.2.0/24" , "10.0.3.0/24"]
-  priv_sub = ["private_1" , "private_2"]
-  priv_cidrs = ["10.0.0.0/24" , "10.0.1.0/24"]
-  vpc_cidr   = "10.0.0.0/16"
+  pub_sub = var.public_subnets_names
+  pub_cidr = var.public_cidrs
+  priv_sub = var.private_subnets_names
+  priv_cidrs = var.private_cidrs
+  vpc_cidr   = var.vpc_cidr
   vpc_id     = module.network.vpc_id
   AZs        = var.av_zones
 }
