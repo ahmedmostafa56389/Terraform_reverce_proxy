@@ -10,7 +10,7 @@
 
 __-__ __-__ __-__ __-__ __-__ __-__ __-__
 
-### Requirments
+### Requirements
 
 1. AWS Account
 2. Manage node
